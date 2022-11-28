@@ -6,7 +6,7 @@ Features
 
 `Get latest national emergency alerts`
 
-`Get latest israel palestine conflicg news`
+`Get latest israel palestine conflict news`
 
 `Setup an alert channel to alert you every time there is a new emergency (Soon™)`
 
