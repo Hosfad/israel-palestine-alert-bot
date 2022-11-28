@@ -37,12 +37,14 @@
     "dom-to-image": "^2.6.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "extract-json-from-string": "^1.0.1",
     "formdata-node": "^4.3.3",
     "leaflet": "^1.9.3",
-    "liveuamp_scraper_pro": "^2.3.0",
     "node-leaflet-image": "^0.4.3",
     "nodemon": "^2.0.20",
+    "sha256": "^0.2.0",
     "staticmaps": "^1.10.0",
+    "x-ray": "^2.3.3",
     "yarn": "^1.22.19"
   }
 }

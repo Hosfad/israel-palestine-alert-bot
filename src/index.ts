@@ -12,6 +12,7 @@ if (!BotConfig.discordApplicationId){
   throw new Error("Discord Application Id is not defined");
 }
 buildClient()
+
 app.listen(8000,()=>{
   console.log("Server is running on port 8000")
 });
