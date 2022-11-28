@@ -2,6 +2,14 @@
 
 Uses the Israeli national emergency API to get the latest alerts
 
+Features 
+
+`Get latest national emergency alerts`
+
+`Get latest israel palestine conflicg news`
+
+`Setup an alert channel to alert you every time there is a new emergency (Soon™)`
+
 Starting up 
 ```
 // Clone this repository 
