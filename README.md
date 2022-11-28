@@ -67,6 +67,8 @@ yarn dev
 
 `/news` : `Shows latest israel-palestine news`
 
+<img src="https://github.com/Hosfad/israel-palestine-alert-bot/blob/master/Readme_Images/News.png?raw=true">
+
 Coming soon 
 ```
 1- Setting up an Alert channel for current alerts

@@ -1,10 +1,10 @@
 const BotConfig = {
 
     // Discord bot token (Required)
-    discordBotToken : "MTA0NDUzNDEyMjI4ODI2NzMwNA.GRRRhm.U5U4PdCYxws2Y_AtPAM8SuiOYmAQqQfjqoOa9A",
+    discordBotToken : "",
 
     // Discord application client ID (For registering slash commands) (Required)
-    discordApplicationId : "1044534122288267304",
+    discordApplicationId : "",
 
     // URL to Pikud Haoref's official rocket alert API
     alertsUrl: "https://www.oref.org.il/WarningMessages/alert/alerts.json",
