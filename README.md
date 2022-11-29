@@ -4,9 +4,9 @@ Uses the Israeli national emergency API to get the latest alerts
 
 Features 
 
-`Get latest national emergency alerts`
+`Get latest Missle launch alerts in Israel and Palestine`
 
-`Get latest israel palestine conflict news`
+`Get latest Israel Palestine conflict news`
 
 `Setup an alert channel to alert you every time there is a new emergency (Soon™)`
 

@@ -53,6 +53,7 @@ export function CrawlLiveMap(tag):any {
                 img: 'img@src',
                 url: 'a@href',
                 source : '@data-twitpic',
+                postLink : "@data-link"
 
 
             }])
@@ -60,7 +61,6 @@ export function CrawlLiveMap(tag):any {
                 const tots = d.length;
                 var articles = [];
                 d.forEach(element => {
-
                     var titleSha = sha256(element.title);
                     //console.log(element.title);
                     const added = element.added.includes(" day ") ? element.added.replace(" day ", " days ") : element.added;
@@ -89,6 +89,14 @@ the results we get from the scrape liveuamap must be passed in to here if we wan
 to retreive the coordinates for the past
 the promise returend will resolve and include the article array passed to
 */
+
+export function getCord(url){
+    x(url, '.marker-time' ,{link : "a"} ).then(data=>{
+        console.log(data);
+    })
+}
+
+
 
 export function grabCoordinations(articles) {
     return new Promise((resolve, reject) => {

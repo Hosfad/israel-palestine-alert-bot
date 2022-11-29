@@ -1,6 +1,6 @@
 import { ActivityType, REST, Routes } from "discord.js";
 import BotConfig from "../../BotConfig";
-import { AlertsDayCommand, AlertsMonthCommand, AlertsWeekCommand, NewsCommand } from "./Commands";
+import { AlertsDayCommand, AlertsMonthCommand, AlertsWeekCommand, NewsAllCommand, NewsCommand } from "./Commands";
 import DiscordClient from "./DiscordClient";
 
 export async function buildClient() {
@@ -9,7 +9,8 @@ export async function buildClient() {
         AlertsDayCommand,
         AlertsWeekCommand,
         AlertsMonthCommand,
-        NewsCommand
+        NewsCommand,
+        NewsAllCommand
     ]
 
     rest.put(Routes.applicationCommands(BotConfig.discordApplicationId),

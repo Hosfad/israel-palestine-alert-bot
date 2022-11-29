@@ -60,8 +60,8 @@ export const CommandListener:any = {
      }
      // News command
      if(props.isCommand() && props.commandName === "news"){
-        const news = await getLatestNews();
-        props.reply("Fetching latest news...");
+        const news = await getLatestNews(10);
+        props.reply("Fetching latest 10 news articles...");
         news.map(async a => {
          const row = new ActionRowBuilder();
          if(a.source){
@@ -79,8 +79,33 @@ export const CommandListener:any = {
          }
 
         })
-         
+         return
      }
      
+
+          // News command
+          if(props.isCommand() && props.commandName === "news-all"){
+            const news = await getLatestNews();
+            props.reply("Fetching all news articles...");
+            news.map(async a => {
+             const row = new ActionRowBuilder();
+             if(a.source){
+                row.addComponents(
+                   new ButtonBuilder()
+                      .setURL(a.source)
+                      .setLabel('News source')
+                      .setStyle(ButtonStyle.Link),
+                   
+                );
+                props.channel.send({embeds:[await getNewsEmbed(a)] , components:[row]});
+    
+             }else{
+                props.channel.send({embeds:[await getNewsEmbed(a)] });
+             }
+    
+            })
+             return
+         }
+
 	},
 };
