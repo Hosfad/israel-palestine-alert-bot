@@ -51,7 +51,8 @@ export function CrawlLiveMap(tag):any {
                 title: '.title',
                 added: '.date_add',
                 img: 'img@src',
-                url: 'a@href'
+                url: 'a@href',
+                source : '@data-twitpic',
 
 
             }])
@@ -60,18 +61,16 @@ export function CrawlLiveMap(tag):any {
                 var articles = [];
                 d.forEach(element => {
 
-                    //filter
-
                     var titleSha = sha256(element.title);
-
                     //console.log(element.title);
                     const added = element.added.includes(" day ") ? element.added.replace(" day ", " days ") : element.added;
                     articles.push({
                         uidSha256: titleSha,
                         title: element.title,
                         url: element.url,
-                        urlToImage: element.img,
+                        imageUrl: element.img,
                         published: added,
+                        source: element.source
                     })
                 })
 

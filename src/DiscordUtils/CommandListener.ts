@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Events } from "discord.js";
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events } from "discord.js";
 import e from "express";
 import { getAlertHistory } from "../AlertSettings";
 import { createMap } from "../MapSettings/CreateMap";
@@ -63,7 +63,21 @@ export const CommandListener:any = {
         const news = await getLatestNews();
         props.reply("Fetching latest news...");
         news.map(async a => {
-            props.channel.send({embeds:[await getNewsEmbed(a)]})
+         const row = new ActionRowBuilder();
+         if(a.source){
+            row.addComponents(
+               new ButtonBuilder()
+                  .setURL(a.source)
+                  .setLabel('News source')
+                  .setStyle(ButtonStyle.Link),
+               
+            );
+            props.channel.send({embeds:[await getNewsEmbed(a)] , components:[row]});
+
+         }else{
+            props.channel.send({embeds:[await getNewsEmbed(a)] });
+         }
+
         })
          
      }

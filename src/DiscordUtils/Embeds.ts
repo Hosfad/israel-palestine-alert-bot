@@ -38,5 +38,6 @@ export function getNewsEmbed(news:any){
     if (news.imageUrl){
         NewsEmbed.setImage(news.imageUrl);
     }
+
     return NewsEmbed
 }
