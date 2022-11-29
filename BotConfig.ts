@@ -1,7 +1,15 @@
 const BotConfig = {
 
     // Discord bot token (Required)
-    discordBotToken : "",     discordApplicationId : "",     alertsUrl: "https://www.oref.org.il/WarningMessages/alert/alerts.json",
+
+    discordBotToken : "", 
+
+    // Discord application id (Required for registering slash commands)
+
+    discordApplicationId : "", 
+
+    
+    alertsUrl: "https://www.oref.org.il/WarningMessages/alert/alerts.json",
 
     // URLs to Pikud Haoref's official history API
     alertsHistoryUrl: "https://www.oref.org.il/Shared/Ajax/GetAlarmsHistory.aspx",
